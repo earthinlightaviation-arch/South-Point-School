@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Point School And College | Baridhara</title>
+    <!-- Tailwind CSS for Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 58, 138, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Top Notice Bar -->
+    <div class="bg-amber-500 text-slate-950 text-xs sm:text-sm font-semibold py-2 px-4 text-center">
+        <span><i class="fa-solid fa-bullhorn mr-2"></i>Admissions Open for Academic Session 2027 (Bangla & English Version) — Apply Online Today!</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-xl bg-blue-900 text-white flex items-center justify-center font-extrabold text-xl shadow-md">
+                        SP
+                    </div>
+                    <div>
+                        <h1 class="text-lg sm:text-xl font-extrabold text-blue-950 leading-tight">South Point School & College</h1>
+                        <p class="text-xs text-slate-500 font-medium">সাউথ পয়েন্ট স্কুল অ্যান্ড কলেজ • Baridhara</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#home" class="hover:text-blue-700 transition">Home</a>
+                    <a href="#about" class="hover:text-blue-700 transition">About Us</a>
+                    <a href="#academics" class="hover:text-blue-700 transition">Academics</a>
+                    <a href="#campus" class="hover:text-blue-700 transition">Campus Life</a>
+                    <a href="#reviews" class="hover:text-blue-700 transition">Reviews</a>
+                    <a href="#contact" class="hover:text-blue-700 transition">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#admission-modal" onclick="toggleModal()" class="bg-blue-900 hover:bg-blue-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-md transition">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-5 space-y-2 shadow-lg">
+            <a href="#home" class="block py-2 text-sm font-semibold text-slate-700">Home</a>
+            <a href="#about" class="block py-2 text-sm font-semibold text-slate-700">About Us</a>
+            <a href="#academics" class="block py-2 text-sm font-semibold text-slate-700">Academics</a>
+            <a href="#campus" class="block py-2 text-sm font-semibold text-slate-700">Campus Life</a>
+            <a href="#reviews" class="block py-2 text-sm font-semibold text-slate-700">Reviews</a>
+            <a href="#contact" class="block py-2 text-sm font-semibold text-slate-700">Contact</a>
+            <button onclick="toggleModal()" class="w-full mt-2 bg-blue-900 text-white text-sm font-semibold py-2.5 rounded-lg">
+                Apply for Admission
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-amber-300 mb-6">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Rated 4.4★ by 719+ Guardians & Students in Dhaka</span>
+                </div>
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Nurturing Future Leaders with <span class="text-amber-400">Excellence & Integrity.</span>
+                </h2>
+                <p class="text-lg sm:text-xl text-slate-200 mb-8 leading-relaxed">
+                    Located in the heart of Baridhara, Dhaka, South Point School & College offers a disciplined, inspiring environment across both Bangla and English versions.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="toggleModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                        Online Admission <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                    <a href="#about" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-sm transition">
+                        Explore Campus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Cards -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Baridhara Campus</h3>
+                    <p class="text-sm text-slate-600 mt-1">Baridhara J Block, Dhaka 1212, Bangladesh</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Campus Hours</h3>
+                    <p class="text-sm text-slate-600 mt-1">Opens 7:30 AM (Sun – Thu)</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-lg border border-slate-100 flex items-start space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Admission Desk</h3>
+                    <p class="text-sm text-slate-600 mt-1">01754-412344 | spsc-baridhara.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-blue-700 font-bold text-sm uppercase tracking-wider">About Our Institution</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">
+                    Where Quality Education Meets a Supportive Environment
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    South Point School & College stands as one of Dhaka's premier private educational institutions. With dedicated faculty members, modern laboratories, and a clean, secure campus, we focus on holistic student development.
+                </p>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    From foundational primary learning to higher secondary college education, our curriculum balances strong academic rigor with co-curricular activities like our renowned Annual Science Fair and Annual Sports.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="border-l-4 border-blue-800 pl-4">
+                        <p class="text-2xl font-extrabold text-blue-950">20+ Years</p>
+                        <p class="text-xs text-slate-500 font-medium">Academic Excellence</p>
+                    </div>
+                    <div class="border-l-4 border-amber-500 pl-4">
+                        <p class="text-2xl font-extrabold text-blue-950">100%</p>
+                        <p class="text-xs text-slate-500 font-medium">Dedicated Mentorship</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Learning" class="rounded-2xl shadow-xl object-cover h-96 w-full">
+                <div class="absolute -bottom-6 -left-6 bg-blue-900 text-white p-6 rounded-2xl shadow-lg hidden sm:block">
+                    <p class="text-lg font-bold">Accessible Campus</p>
+                    <p class="text-xs text-blue-200 mt-1">Wheelchair-friendly & safe environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-blue-700 font-bold text-sm uppercase tracking-wider">Academic Streams</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tailored Pathways for Every Learner</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-slate-100">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-800 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Primary & Junior Section</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Building strong fundamentals in literacy, numeracy, moral values, and creative curiosity in a nurturing classroom atmosphere.
+                    </p>
+                    <span class="inline-block text-xs font-bold text-blue-800 bg-blue-50 px-3 py-1 rounded-full">Playgroup – Class VIII</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-slate-100">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Secondary (SSC)</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Focused board exam preparation across Science, Business Studies, and Humanities with hands-on laboratory experiments.
+                    </p>
+                    <span class="inline-block text-xs font-bold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">Class IX – Class X</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-slate-100">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Higher Secondary (HSC)</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Pre-university academic excellence, career counseling, and disciplined mentoring to prepare students for top universities.
+                    </p>
+                    <span class="inline-block text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full">Class XI – Class XII</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life & Highlights -->
+    <section id="campus" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <span class="text-blue-700 font-bold text-sm uppercase tracking-wider">Beyond Classrooms</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Vibrant Campus Life</h2>
+            </div>
+            <p class="text-slate-500 text-sm max-w-md mt-4 md:mt-0">
+                Encouraging innovation, teamwork, and physical fitness through annual events and modern facilities.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group relative rounded-2xl overflow-hidden shadow-md h-64">
+                <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Science Fair">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-5">
+                    <h4 class="text-white font-bold">Annual Science Fair</h4>
+                </div>
+            </div>
+            <div class="group relative rounded-2xl overflow-hidden shadow-md h-64">
+                <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Annual Sports">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-5">
+                    <h4 class="text-white font-bold">Annual Sports & Athletics</h4>
+                </div>
+            </div>
+            <div class="group relative rounded-2xl overflow-hidden shadow-md h-64">
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Library">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-5">
+                    <h4 class="text-white font-bold">Rich Library & Study Hall</h4>
+                </div>
+            </div>
+            <div class="group relative rounded-2xl overflow-hidden shadow-md h-64">
+                <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Cultural Events">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-5">
+                    <h4 class="text-white font-bold">Cultural & Debate Clubs</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Testimonials -->
+    <section id="reviews" class="py-20 bg-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-amber-400 font-bold text-sm uppercase tracking-wider">Guardian Voices</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Trusted by Parents Across Dhaka</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-7 rounded-2xl border border-white/10">
+                    <div class="text-amber-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-slate-200 text-sm leading-relaxed mb-5">
+                        "South Point School & College has a wonderful learning environment. The teachers are very sincere, which has greatly helped my child learn effectively."
+                    </p>
+                    <p class="font-bold text-sm">Azim Mirza</p>
+                    <p class="text-xs text-blue-300">Parent</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-7 rounded-2xl border border-white/10">
+                    <div class="text-amber-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-slate-200 text-sm leading-relaxed mb-5">
+                        "The dedicated staff and engaging environment make it a wonderful place. Impressed with the quality of education and support provided."
+                    </p>
+                    <p class="font-bold text-sm">Guardian Review</p>
+                    <p class="text-xs text-blue-300">Baridhara Campus</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-7 rounded-2xl border border-white/10">
+                    <div class="text-amber-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-slate-200 text-sm leading-relaxed mb-5">
+                        "The school and the grounds inside are really beautiful and clean. Good education truly comes from a good environment."
+                    </p>
+                    <p class="font-bold text-sm">Visitor & Guardian</p>
+                    <p class="text-xs text-blue-300">Dhaka</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+            <div class="md:col-span-2">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-9 h-9 rounded-lg bg-blue-900 text-white flex items-center justify-center font-extrabold text-base">
+                        SP
+                    </div>
+                    <h3 class="text-white text-lg font-extrabold">South Point School And College</h3>
+                </div>
+                <p class="text-sm text-slate-400 max-w-md leading-relaxed mb-4">
+                    Committed to shaping well-rounded, ethical, and academically accomplished citizens with high moral values and rigorous education standards in Bangladesh.
+                </p>
+                <p class="text-sm text-slate-300"><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i> Baridhara J Block, Dhaka 1212</p>
+                <p class="text-sm text-slate-300 mt-2"><i class="fa-solid fa-phone text-amber-400 mr-2"></i> 01754-412344</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#academics" class="hover:text-white transition">Academics</a></li>
+                    <li><a href="#campus" class="hover:text-white transition">Campus Gallery</a></li>
+                    <li><a href="#reviews" class="hover:text-white transition">Guardian Reviews</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Other Branches</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><i class="fa-solid fa-school text-blue-500 mr-1.5 text-xs"></i> Malibagh Campus</li>
+                    <li><i class="fa-solid fa-school text-blue-500 mr-1.5 text-xs"></i> Banani Campus</li>
+                    <li><i class="fa-solid fa-school text-blue-500 mr-1.5 text-xs"></i> Uttara Sector 18 Campus</li>
+                    <li><i class="fa-solid fa-school text-blue-500 mr-1.5 text-xs"></i> Shampur Campus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+            <p>&copy; 2026 South Point School And College (Baridhara). All Rights Reserved.</p>
+            <p class="mt-2 sm:mt-0">Designed for Client Presentation</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Admission Modal -->
+    <div id="admissionModal" class="fixed inset-0 z-50 hidden bg-slate-95
